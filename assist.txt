@@ -1,5 +1,30 @@
-rails server
+rails server // rails s
 rails generate contoller pages
 rails generate migration create_articles
 rails db:migrate
 rails db:rollback
+rails console // rails c
+Article.all // all articles
+Article.create(title: "first article", description: "description of first article")
+article = Article.new // model
+article.title = "second article"
+article.description = "description of second article"
+article.save
+article = Article.new(title: "third article", description: "description of third articl
+") // then save it
+exit // to exit from rails console
+ctrl + l // takes you to top of rails console
+Article.find(2) // find by id
+Article.first // first article
+Article.last // last article
+articles = Article.all // all articles in array
+article = Article.find(2)
+article.title // logs title
+article.title = "updated second article" // follow up with article.save to save changes to database
+article = Artile.last
+article.destroy // hits the database
+reload! // inside rails console to update it acc to changes in modal
+article.errors // to get errors while saving it to database
+// note that attempt must be made to save to populate errors
+article.errors.full_messages // to get redeable message of errors
+// ["Title can't be blank", "Description can't be blank"]
