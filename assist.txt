@@ -21,10 +21,14 @@ articles = Article.all // all articles in array
 article = Article.find(2)
 article.title // logs title
 article.title = "updated second article" // follow up with article.save to save changes to database
-article = Artile.last
+article = Article.last
 article.destroy // hits the database
 reload! // inside rails console to update it acc to changes in modal
 article.errors // to get errors while saving it to database
 // note that attempt must be made to save to populate errors
 article.errors.full_messages // to get redeable message of errors
 // ["Title can't be blank", "Description can't be blank"]
+rails routes
+rails routes --expanded
+byebug // to stop execution
+// type continue in console to continue execution
