@@ -1,1 +1,2 @@
 rails server
+rails generate contoller pages
