@@ -1,2 +1,5 @@
 rails server
 rails generate contoller pages
+rails generate migration create_articles
+rails db:migrate
+rails db:rollback
