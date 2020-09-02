@@ -32,3 +32,10 @@ rails routes
 rails routes --expanded
 byebug // to stop execution
 // type continue in console to continue execution
+
+
+// inside the rails console
+article.errors.full_messages.each do |msg|
+    puts msg
+end
+// on subsequent lines
