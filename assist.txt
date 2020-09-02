@@ -39,3 +39,5 @@ article.errors.full_messages.each do |msg|
     puts msg
 end
 // on subsequent lines
+
+bundle install --without production // if changes made to gem file, changes will be reflected in gemfile.lock
