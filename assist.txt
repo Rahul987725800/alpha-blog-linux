@@ -6,14 +6,14 @@ rails db:rollback
 rails console // rails c
 Article.all // all articles
 Article.create(title: "first article", description: "description of first article")
-article = Article.new // model
+article = Article.new // model  
 article.title = "second article"
 article.description = "description of second article"
 article.save
 article = Article.new(title: "third article", description: "description of third articl
 ") // then save it
 exit // to exit from rails console
-ctrl + l // takes you to top of rails console
+ctrl + l // takes you to top of rails console same as clear
 Article.find(2) // find by id
 Article.first // first article
 Article.last // last article
@@ -41,3 +41,8 @@ end
 // on subsequent lines
 
 bundle install --without production // if changes made to gem file, changes will be reflected in gemfile.lock
+
+// after cloning files from github we did
+bundle install
+yarn install --check-files
+rails db:migrate RAILS_ENV=development
