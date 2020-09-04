@@ -2,12 +2,7 @@
 @import "bootstrap/dist/css/bootstrap";
 // this import allows modification of bootstrap classes
 
-.navbar {
-  background-color: #000000 !important;
-  & .nav-link {
-    color: white !important;
-  }
-}
+
 #logo {
   float: left;
   font-size: 1.7em;
@@ -38,4 +33,12 @@ body {
 
 #sticky-footer {
   flex-shrink: none;
+}
+.card-width {
+  width: 66.66%;
+}
+@media (max-width: 700px) {
+  .card-width {
+    width: 100%;
+  }
 }
