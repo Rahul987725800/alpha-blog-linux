@@ -34,11 +34,16 @@ body {
 #sticky-footer {
   flex-shrink: none;
 }
-.card-width {
+.my-card-width {
   width: 66.66%;
 }
-@media (max-width: 700px) {
-  .card-width {
+@media (max-width: 900px) {
+  .my-card-width {
     width: 100%;
   }
+  #my-form-label, #my-form-field {
+    flex-basis: 100%;
+    max-width: 100%;
+  }  
 }
+
