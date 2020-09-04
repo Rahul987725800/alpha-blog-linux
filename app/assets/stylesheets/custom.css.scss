@@ -46,4 +46,15 @@ body {
     max-width: 100%;
   }  
 }
-
+.field_with_errors {
+  min-width: 16.666667%;
+  input, textarea {
+    animation: red-border 3s;
+  }
+}
+@keyframes red-border {
+  from {
+    border-width: 2px;
+    border-color: rgb(180, 67, 67);
+  }
+}
