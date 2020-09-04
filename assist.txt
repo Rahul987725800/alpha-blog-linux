@@ -46,3 +46,12 @@ bundle install --without production // if changes made to gem file, changes will
 bundle install
 yarn install --check-files
 rails db:migrate RAILS_ENV=development
+
+// when we make an error in form input, rails wraps label and inputs which are wrong with 
+// a div having class "field_with_errors", thats the reason inline input field style gets messed up
+// you can either disable it or define a styling for it
+// for disabling it go to config/environment.rb // add following lines
+// and restart server for changes to take effect
+ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
+  html_tag.html_safe
+end
