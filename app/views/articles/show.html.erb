@@ -1,24 +1,22 @@
-<div id="page-content">
-  <h2 class="text-center mt-4"><%= @article.title %></h2>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="my-card-width m-4">
-        <div class="card text-center shadow rounded">
-          <div class="card-header font-italic">
-            by Rahul Gupta
-          </div>
-          <div class="card-body">
-            <%# simple_format ensures newlines and spaces are preserved in description %>
-            <div class="card-text text-left"><%= simple_format(@article.description) %></div>
-            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
-            <%= link_to "Delete", article_path(@article),
-             class: "btn btn-outline-danger", method: :delete,
-              data: { confirm: "Are you sure?" } %>
-          </div>
-          <div class="card-footer text-muted">
-            <small> Created <%= time_ago_in_words(@article.created_at) %> ago,
-                    Edited <%= time_ago_in_words(@article.updated_at) %> ago </small>
-          </div>
+<h2 class="text-center mt-4"><%= @article.title %></h2>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="my-card-width m-4">
+      <div class="card text-center shadow rounded">
+        <div class="card-header font-italic">
+          by Rahul Gupta
+        </div>
+        <div class="card-body">
+          <%# simple_format ensures newlines and spaces are preserved in description while rendering %>
+          <div class="card-text text-left"><%= simple_format(@article.description) %></div>
+          <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
+          <%= link_to "Delete", article_path(@article),
+            class: "btn btn-outline-danger", method: :delete,
+            data: { confirm: "Are you sure?" } %>
+        </div>
+        <div class="card-footer text-muted">
+          <small> Created <%= time_ago_in_words(@article.created_at) %> ago,
+                  Edited <%= time_ago_in_words(@article.updated_at) %> ago </small>
         </div>
       </div>
     </div>
