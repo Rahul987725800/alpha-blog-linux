@@ -55,3 +55,14 @@ rails db:migrate RAILS_ENV=development
 ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
   html_tag.html_safe
 end
+
+
+rails generate scaffold User username:string
+rails db:migrate
+rails generate migration add_user_id_to_articles
+rails db:migrate
+// go to rails console
+// reload it 
+reload!
+Article.all
+// all articles will have user_id field with value nil
