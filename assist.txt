@@ -66,3 +66,29 @@ rails db:migrate
 reload!
 Article.all
 // all articles will have user_id field with value nil
+
+// add the following
+has_many :articles // to user.rb
+belongs_to :user // to article.rb
+// then run User.articles in console, it will return #<ActiveRecord::Associations::CollectionProxy []>
+
+// forming association from article to user
+Article.create(
+  title: "some articles",
+  description: "descrption of some article",
+  user_id: User.first.id // or just 'user: User.first'
+) // creates article with user_id of first user
+User.first.articles // returns the articles of that user
+
+
+// forming association from user to article
+user1 = User.first
+user1.articles.build(title: "some new article", description: "article created directly by user")
+article = _               // this assigns previously returned value to article
+// now article points to article created by user1 now simply save it
+article.save
+
+// using showell operator
+user2 = User.last
+article = Article.first // article not associated to any user
+user2.articles << article
