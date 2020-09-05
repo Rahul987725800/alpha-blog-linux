@@ -22,7 +22,7 @@ article = Article.find(2)
 article.title // logs title
 article.title = "updated second article" // follow up with article.save to save changes to database
 article = Article.last
-article.destroy // hits the database
+article.destroy // hits the database deletes the article
 reload! // inside rails console to update it acc to changes in modal
 article.errors // to get errors while saving it to database
 // note that attempt must be made to save to populate errors
@@ -56,7 +56,7 @@ ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
   html_tag.html_safe
 end
 
-
+// please note scaffold creates views and all functionality for crud operations on user
 rails generate scaffold User username:string
 rails db:migrate
 rails generate migration add_user_id_to_articles
@@ -92,3 +92,12 @@ article.save
 user2 = User.last
 article = Article.first // article not associated to any user
 user2.articles << article
+
+// in lectures mushrur didn't used scaffold
+// he created migration file create_users
+// added fields
+t.string :username
+t.string :email
+t.timestamps
+
+// we deleted scaffold.scss file as it was interfering with styling
