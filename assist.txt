@@ -55,6 +55,7 @@ rails db:migrate RAILS_ENV=development
 ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
   html_tag.html_safe
 end
+<<<<<<< HEAD
 
 // please note scaffold creates views and all functionality for crud operations on user
 rails generate scaffold User username:string
@@ -101,3 +102,5 @@ t.string :email
 t.timestamps
 
 // we deleted scaffold.scss file as it was interfering with styling
+=======
+>>>>>>> parent of 289dda1... commands for creating user read assist.txt

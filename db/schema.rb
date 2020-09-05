@@ -10,13 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_09_05_093933) do
+=======
+ActiveRecord::Schema.define(version: 2020_09_01_055707) do
+>>>>>>> parent of 289dda1... commands for creating user read assist.txt
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
     t.integer "user_id"
   end
 
@@ -25,6 +30,8 @@ ActiveRecord::Schema.define(version: 2020_09_05_093933) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "email"
+=======
+>>>>>>> parent of 289dda1... commands for creating user read assist.txt
   end
 
 end
